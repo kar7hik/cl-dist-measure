@@ -1,0 +1,17 @@
+* cl-dist-measure
+
+* Introduction
+Pure common-lisp implementation of various distance algorithms.
+
+* Implemented Algorithms
+- [X] Euclidean Distance
+- [ ] Cosine Similarity
+- [ ] Manhattan Distance
+- [ ]
+
+* Features
+
+* License
+MIT
+
+Copyright (c) 2022 S. Karthik Kumar karthikkumar.s@protonmail.com
