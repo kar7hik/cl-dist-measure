@@ -10,6 +10,8 @@
   :version "0.0.1"
   :serial t
   :depends-on (#:iterate #:alexandria #:random-state)
-  :components ((:file "package")
-               (:file "util")
-               (:file "cl-dist-measure")))
+  :components ((:module "src"
+                :serial t
+                :components ((:file "package")
+                             (:file "util")
+                             (:file "cl-dist-measure")))))

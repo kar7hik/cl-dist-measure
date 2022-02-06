@@ -64,6 +64,7 @@ type - FIXNUM or DOUBLE-FLOAT"
                         (finally (return random-vector))))))))
 
 
+
 (defun vectors-with-same-sizep (first-vec second-vec)
   "Predicate function to compare two input vectors for the size."
   (declare #.*full-optimize-settings*
