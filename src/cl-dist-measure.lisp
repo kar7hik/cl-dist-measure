@@ -28,7 +28,7 @@
       (finally (return (sqrt (reduce #'+ result)))))))
 
 
-;; (defparameter *x* (create-random-vector 20))
-;; (defparameter *y* (create-random-vector 20))
+(defparameter *x* (create-random-vector 20))
+(defparameter *y* (create-random-vector 20))
 
-;; (time (vector-euclidean-distance *x* *y*))
+(time (vector-euclidean-distance *x* *y*))

@@ -13,5 +13,5 @@
   :components ((:module "src"
                 :serial t
                 :components ((:file "package")
-                             (:file "util")
+                             (:file "utils")
                              (:file "cl-dist-measure")))))
