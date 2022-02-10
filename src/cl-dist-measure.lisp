@@ -19,7 +19,7 @@
   (declare (type (simple-vector *) x-vector y-vector))
   (let ((xvec-size (array-total-size x-vector)))
     (declare (type fixnum xvec-size))
-    (unless (vectors-with-same-sizep)
+    (unless (vectors-with-same-sizep x-vector y-vector)
       (error "~&Length of both input vectors must be same."))
     (iterate (declare (iterate:declare-variables))
       (for i :from 0 :below xvec-size)

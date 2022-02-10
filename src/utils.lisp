@@ -1,7 +1,7 @@
 (in-package #:cl-dist-measure)
 
 
-(defvar *standard-optimize-settings*
+(defparameter *standard-optimize-settings*
   '(optimize
     (speed 3)
     (safety 1)
@@ -9,7 +9,7 @@
     (compilation-speed 0))
   "Normal optimization options.")
 
-(defvar *full-optimize-settings*
+(defparameter *full-optimize-settings*
   '(optimize
     (speed 3)
     (safety 0)
@@ -17,7 +17,7 @@
     (compilation-speed 0))
   "Option to fully optimize the program.")
 
-(defvar *full-debug-settings*
+(defparameter *full-debug-settings*
   '(optimize
     (speed 0)
     (safety 3)
@@ -67,8 +67,8 @@ type - FIXNUM or DOUBLE-FLOAT"
 
 (defun vectors-with-same-sizep (first-vec second-vec)
   "Predicate function to compare two input vectors for the size."
-  (declare #.*full-optimize-settings*
-           (type (simple-vector *) first-vec second-vec))
+  (declare #.*full-optimize-settings*)
+  (declare (type (simple-vector *) first-vec second-vec))
   (equalp (array-total-size first-vec)
           (array-total-size second-vec)))
 
@@ -82,8 +82,8 @@ Example use:
 (create-vector-with-input-value 5 #(2 3 4 5))
 ;;; #(5 5 5 5)
 "
-  (declare #.*full-optimize-settings*
-           (type (simple-vector *) reference-vector))
+  (declare #.*full-optimize-settings*)
+  (declare (type (simple-vector *) reference-vector))
   (when (vectors-with-same-sizep ))
   (make-array (array-total-size reference-vector)
               :element-type 'simple-vector

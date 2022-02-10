@@ -9,5 +9,5 @@
         #:alexandria-2)
   (:shadowing-import-from #:alexandria-2 #:flatten))
 
-(print "Success")
+
 (in-package #:cl-dist-measure)
