@@ -5,7 +5,7 @@ Pure common-lisp implementation of various distance algorithms.
 
 * Implemented Algorithms
 - [X] Euclidean Distance
-- [ ] Cosine Similarity
+- [X] Cosine Similarity
 - [ ] Manhattan Distance
 - [ ]
 
