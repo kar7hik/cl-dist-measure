@@ -1,30 +1,39 @@
 (in-package #:cl-dist-measure)
 
 
-(defparameter *standard-optimize-settings*
-  '(optimize
-    (speed 3)
-    (safety 1)
-    (debug 1)
-    (compilation-speed 0))
-  "Normal optimization options.")
+(eval-when (:compile-toplevel :load-toplevel)
+  (defparameter *standard-optimize-settings*
+    '(optimize
+      (speed 3)
+      (safety 1)
+      (debug 1)
+      (compilation-speed 0))
+    "Normal optimization options."))
 
-(defparameter *full-optimize-settings*
-  '(optimize
-    (speed 3)
-    (safety 0)
-    (debug 0)
-    (compilation-speed 0))
-  "Option to fully optimize the program.")
 
-(defparameter *full-debug-settings*
-  '(optimize
-    (speed 0)
-    (safety 3)
-    (debug 3)
-    (space 0)
-    (compilation-speed 0))
-  "Option to fully debug the program.")
+(eval-when (:compile-toplevel :load-toplevel)
+  (defparameter *full-optimize-settings*
+    '(optimize
+      (speed 3)
+      (safety 0)
+      (debug 0)
+      (compilation-speed 0))
+    "Option to fully optimize the program."))
+
+(eval-when (:compile-toplevel :load-toplevel)
+  (defparameter *full-debug-settings*
+    '(optimize
+      (speed 0)
+      (safety 3)
+      (debug 3)
+      (space 0)
+      (compilation-speed 0))
+    "Option to fully debug the program."))
+
+
+;; (deftype single-float-vector (length)
+;;   `(simple-array single-float (,length)))
+
 
 
 (defun square (value)
@@ -64,27 +73,9 @@ type - FIXNUM or DOUBLE-FLOAT"
                         (finally (return random-vector))))))))
 
 
-
 (defun vectors-with-same-sizep (first-vec second-vec)
   "Predicate function to compare two input vectors for the size."
   (declare #.*full-optimize-settings*)
   (declare (type (simple-vector *) first-vec second-vec))
   (equalp (array-total-size first-vec)
           (array-total-size second-vec)))
-
-
-(defun create-vector-with-input-value (value reference-vector)
-  "Creates a vector with the given value and same size as reference-vector.
-Example use:
-(create-vector-with-input-value #(1 2 3) #(2 3 4 5))
-;;; #(#(1 2 3) #(1 2 3) #(1 2 3) #(1 2 3))
-
-(create-vector-with-input-value 5 #(2 3 4 5))
-;;; #(5 5 5 5)
-"
-  (declare #.*full-optimize-settings*)
-  (declare (type (simple-vector *) reference-vector))
-  (when (vectors-with-same-sizep ))
-  (make-array (array-total-size reference-vector)
-              :element-type 'simple-vector
-              :initial-element value))

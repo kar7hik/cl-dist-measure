@@ -28,6 +28,40 @@
       (finally (return (sqrt (reduce #'+ result)))))))
 
 
+(defun cosine-similarity (x-vector y-vector &key (n (length x-vector)))
+  "Returns the Cosine Similarity between two vectors."
+  ;; (declare (type (simple-array single-float (*)) x-vector y-vector)
+  ;;          (type fixnum n))
+  (let ((numerator 0d0)
+        (denom-1 0d0)
+        (denom-2 0d0))
+    ;; (declare (type float numerator denom-1 denom-2))
+    (let ((temp-a 0d0)
+          (temp-b 0d0))
+      ;; (declare (type float temp-a temp-b))
+      (iterate
+        (for i :below n)
+        (setf temp-a (aref x-vector i))
+        (setf temp-b (aref y-vector i))
+        (incf numerator (* temp-a temp-b))
+        (incf denom-1 (* temp-a temp-a))
+        (incf denom-2 (* temp-b temp-b)))
+      (setf denom-1 (sqrt denom-1))
+      (setf denom-2 (sqrt denom-2))
+      (if (or (zerop denom-1)
+              (zerop denom-2))
+          0d0
+          (/ numerator denom-1 denom-2)))))
+
+
+(time (cosine-similarity (make-array 3 :initial-contents #(1d0 2d0 3d0))
+                         (make-array 3 :initial-contents #(6d0 8d0 9d0))))
+(time (cosine-similarity *x* *y*))
+
+(type-of (make-array '(5)))
+
+(type-of (make-array 3 :initial-contents #(1d0 2d0 3d0)))
+
 (defparameter *x* (create-random-vector 20))
 (defparameter *y* (create-random-vector 20))
 
