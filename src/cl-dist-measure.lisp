@@ -30,15 +30,15 @@
 
 (defun cosine-similarity (x-vector y-vector &key (n (length x-vector)))
   "Returns the Cosine Similarity between two vectors."
-  ;; (declare (type (simple-array single-float (*)) x-vector y-vector)
-  ;;          (type fixnum n))
+  (declare (type (simple-array single-float (*)) x-vector y-vector)
+           (type fixnum n))
   (let ((numerator 0d0)
         (denom-1 0d0)
         (denom-2 0d0))
-    ;; (declare (type float numerator denom-1 denom-2))
+    (declare (type float numerator denom-1 denom-2))
     (let ((temp-a 0d0)
           (temp-b 0d0))
-      ;; (declare (type float temp-a temp-b))
+      (declare (type float temp-a temp-b))
       (iterate
         (for i :below n)
         (setf temp-a (aref x-vector i))
