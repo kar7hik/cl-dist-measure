@@ -37,6 +37,14 @@
 (deftype single-float-array ()
   `(simple-array single-float (*)))
 
+(defparameter *generator* (random-state:make-generator :mersenne-twister-64 123)
+  "Random state generator.")
+(defparameter *low* 0
+  "Low limit for random number generator.")
+(defparameter *high* 1
+  "High limit for random number generator.")
+
+
 
 (defun square (value)
   "Returns the square of the number."

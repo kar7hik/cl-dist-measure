@@ -6,9 +6,15 @@ Pure common-lisp implementation of various distance algorithms. For more details
 * Implemented Algorithms
 - [X] Euclidean Distance
 - [X] Cosine Similarity
-- [ ] Manhattan Distance
 
-* Features
+* Usage
+#+begin_src emacs-lisp
+(defparameter *x* (create-random-vector 20))
+(defparameter *y* (create-random-vector 20))
+
+(time (euclidean-distance *x* *y*))
+(time (cosine-similarity *x* *y*))
+#+end_src
 
 * License
 MIT

@@ -13,10 +13,10 @@
   "High limit for random number generator.")
 
 
-(defun vector-euclidean-distance (x-vector y-vector)
+(defun euclidean-distance (x-vector y-vector)
   "Returns the euclidean distance between x-vector and y-vector."
   ;; (declare #.*full-optimize-settings*)
-  (declare (type (simple-vector *) x-vector y-vector))
+  (declare (type single-float-vector x-vector y-vector))
   (let ((xvec-size (array-total-size x-vector)))
     (declare (type fixnum xvec-size))
     (unless (vectors-with-same-sizep x-vector y-vector)
@@ -54,12 +54,8 @@
           (/ numerator denom-1 denom-2)))))
 
 
-(time (cosine-similarity (make-array 3 :initial-contents #(1d0 2d0 3d0))
-                         (make-array 3 :initial-contents #(6d0 8d0 9d0))))
+;; (defparameter *x* (create-random-vector 20))
+;; (defparameter *y* (create-random-vector 20))
 
-
-(defparameter *x* (create-random-vector 20))
-(defparameter *y* (create-random-vector 20))
-
-(time (vector-euclidean-distance *x* *y*))
-(time (cosine-similarity *x* *y*))
+;; (time (euclidean-distance *x* *y*))
+;; (time (cosine-similarity *x* *y*))
