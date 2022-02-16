@@ -1,7 +1,7 @@
 * cl-dist-measure
 
 * Introduction
-Pure common-lisp implementation of various distance algorithms. For more details on the equation and the references, look into the ![docs](./docs) folder.
+Pure common-lisp implementation of various distance algorithms. For more details on the equation and the references, look into the [[docs][./docs]] folder.
 
 * Implemented Algorithms
 - [X] Euclidean Distance
