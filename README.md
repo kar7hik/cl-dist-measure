@@ -28,8 +28,13 @@ The **Euclidean distance** between two points in Euclidean space is the length o
 ## One dimension
 
 The distance between any two points on the real line is the absolute value of the numerical difference of their coordinates. Thus if *p* and *q* are two points on the real line, then the distance between them is given by:
-$$d(p, q) = |p -q|$$
-$$d(p, q) = \sqrt{(p-q)^2}$$
+$$
+d(p, q) = |p -q|
+$$
+
+$$
+d(p, q) = \sqrt{(p-q)^2}
+$$
 
 
 ## Two dimensions
