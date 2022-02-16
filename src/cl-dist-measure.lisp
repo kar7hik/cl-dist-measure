@@ -52,10 +52,3 @@
               (zerop denom-2))
           0d0
           (/ numerator denom-1 denom-2)))))
-
-
-;; (defparameter *x* (create-random-vector 20))
-;; (defparameter *y* (create-random-vector 20))
-
-;; (time (euclidean-distance *x* *y*))
-;; (time (cosine-similarity *x* *y*))

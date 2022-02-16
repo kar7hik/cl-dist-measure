@@ -8,9 +8,11 @@ Pure common-lisp implementation of various distance algorithms. For more details
 - [X] Cosine Similarity
 
 * Usage
-#+begin_src emacs-lisp
-(defparameter *x* (create-random-vector 20))
-(defparameter *y* (create-random-vector 20))
+#+begin_src lisp
+(ql:quicklisp :cl-dist-measure)
+(in-package :cl-dist-measure)
+(defparameter *x* (create-random-vector 20)) ;;
+(DEFPARAMETER *y* (create-random-vector 20))
 
 (time (euclidean-distance *x* *y*))
 (time (cosine-similarity *x* *y*))
