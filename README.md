@@ -28,6 +28,9 @@ The **Euclidean distance** between two points in Euclidean space is the length o
 ## One dimension
 
 The distance between any two points on the real line is the absolute value of the numerical difference of their coordinates. Thus if *p* and *q* are two points on the real line, then the distance between them is given by:
+$$d(p, q) = |p -q|$$
+$$d(p, q) = \sqrt{(p-q)^2}$$
+
 
 ## Two dimensions
 
@@ -49,6 +52,7 @@ It is a popular method for approximating how similar two vectors are. The intuit
 From trigonometry we know that the
 ![sinecosinepng](./data/sine-cosine.png)
 ![cosine\sine\tanjpeg](./data/cosine_sine_tan.jpeg)
+
 The Dot Product of two Euclidean vectors** **a and** **b is defined by,
 
 > Two vectors with exactly the same orientation have a cosine similarity of 1, whereas two vectors diametrically opposed to each other have a similarity of -1. Note that their magnitude is not of importance as this is a measure of orientation.

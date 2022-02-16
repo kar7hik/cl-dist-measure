@@ -17,14 +17,34 @@ The **Euclidean distance** between two points in Euclidean space is the length o
 
 The distance between any two points on the real line is the absolute value of the numerical difference of their coordinates. Thus if *p* and *q* are two points on the real line, then the distance between them is given by:   
 
+$$
+d(p, q) = |p -q|
+$$
+
+$$
+d(p, q) = \sqrt{(p-q)^2}
+$$
+
 ## Two dimensions
 
 In the Euclidean plane, let point *p* have Cartesian coordinates *(p1, p2)* and let point *q* have coordinates *(q1, q2).*   
 Then the distance between *p* and *q* is given by,    
 
+$$
+d(p, q) = \sqrt{(q_1-p_1)^2+(q_2-p_2)^2}
+$$
+
 ## Higher dimensions
 
 In general, for points given by Cartersian coordinates in n-dimensional Euclidean space, the distance is,    
+
+$$
+d(p,q) = \sqrt{(p_1-q_1)^2+(p_2-q_2)^2+\dots+(p_n-q_n)^2}
+$$
+
+$$
+d(p, q) = \sqrt{\sum_{i=1}^n(p_i-q_i)^2}
+$$
 
 ## Disadvantages
 
@@ -35,9 +55,32 @@ Moreover, as the dimensionality increases of your data, the less useful Euclidea
 
 It is a popular method for approximating how similar two vectors are. The intuition behind cosine similarity is relatively straightforward, we simply use the cosine of the angle between the two vectors to quantify how similar two vectors are.    
 From trigonometry we know that the    
+
+$$
+cos(0^\degree) = 1
+$$
+
+$$
+cos(90^\degree) = 0 \space and \space 0 <= cos(\theta) <= 1.
+$$
+
 ![sine-cosine.png](/home/karthik/quicklisp/local-projects/cl-dist-measure/data/sine-cosine.png)    
 ![cosine\_sine\_tan.jpeg](/home/karthik/quicklisp/local-projects/cl-dist-measure/data/cosine_sine_tan.jpeg)    
 The Dot Product  of two Euclidean vectors** **a and** **b is defined by,    
+
+$$
+a \cdot b = \|a\| \space \|b\| \space cos \theta, 
+$$
+
+$$
+cos(\theta) = \frac{a \cdot b}{\|a\| \space \|b\|}
+$$
+
+$$
+cos(\theta) = \frac{\displaystyle\sum_{i = 1}^n A_iB_i}{\sqrt{\displaystyle\sum_{i = 1}^n A_i^2}\sqrt{\displaystyle\sum_{i = 1}^n B_i^2}},
+$$
+
+
 
 > Two vectors with exactly the same orientation have a cosine similarity of 1, whereas two vectors diametrically opposed to each other have a similarity of -1. Note that their magnitude is not of importance as this is a measure of orientation.   
 
@@ -54,4 +97,3 @@ that one document is more related to that word.
 # Reference
 
 [Why is Euclidean distance not a good metric in high dimensions?](https://stats.stackexchange.com/questions/99171/why-is-euclidean-distance-not-a-good-metric-in-high-dimensions)    
-[Server Error – Medium](https://towardsdatascience.com/9-distance-measures-in-data-science-918109d069fa)    
