@@ -21,7 +21,7 @@ A distance measure is simply a means of calculation between two points or object
 ## Euclidean Distance
 
 The **Euclidean distance** between two points in Euclidean space is the length of a line segment between the two points. It can be calculated from the cartesian coordinates of the points using the Pythagorean theorem. Euclidean distance works great when you have low-dimensional data and the magnitude of the vectors is important to be measured.
-![pythagoreanpng](file:///home/karthik/quicklisp/local-projects/cl-dist-measure/data/pythagorean.png)
+![pythagoreanpng](./data/pythagorean.png)
 
 # Distance Formulas
 
@@ -47,8 +47,8 @@ Moreover, as the dimensionality increases of your data, the less useful Euclidea
 
 It is a popular method for approximating how similar two vectors are. The intuition behind cosine similarity is relatively straightforward, we simply use the cosine of the angle between the two vectors to quantify how similar two vectors are.
 From trigonometry we know that the
-![sinecosinepng](file:///home/karthik/quicklisp/local-projects/cl-dist-measure/data/sine-cosine.png)
-![cosine\sine\tanjpeg](file:///home/karthik/quicklisp/local-projects/cl-dist-measure/data/cosine_sine_tan.jpeg)
+![sinecosinepng](./data/sine-cosine.png)
+![cosine\sine\tanjpeg](./data/cosine_sine_tan.jpeg)
 The Dot Product of two Euclidean vectors** **a and** **b is defined by,
 
 > Two vectors with exactly the same orientation have a cosine similarity of 1, whereas two vectors diametrically opposed to each other have a similarity of -1. Note that their magnitude is not of importance as this is a measure of orientation.
