@@ -62,3 +62,4 @@
 (defparameter *y* (create-random-vector 20))
 
 (time (vector-euclidean-distance *x* *y*))
+(time (cosine-similarity *x* *y*))
