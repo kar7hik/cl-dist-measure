@@ -1,15 +1,15 @@
-* cl-dist-measure
+# cl-dist-measure
 
-* Introduction
+# Introduction
 Pure common-lisp implementation of various distance algorithms.
 
-* Implemented Algorithms
+# Implemented Algorithms
 - [X] Euclidean Distance
 - [X] Cosine Similarity
 - [ ] Manhattan Distance
 - [ ]
 
-* Features
+# Features
 
 # Distant measures
 
@@ -21,7 +21,7 @@ A distance measure is simply a means of calculation between two points or object
 
 ## Euclidean Distance
 
-The **Euclidean distance** between two points in Euclidean space is the length of a line segment between the two points. It can be calculated from the cartesian coordinates of the points using the Pythagorean theorem. Euclidean distance works great when you have low-dimensional data and the magnitude of the vectors is important to be measured.  
+The **Euclidean distance** between two points in Euclidean space is the length of a line segment between the two points. It can be calculated from the cartesian coordinates of the points using the Pythagorean theorem. Euclidean distance works great when you have low-dimensional data and the magnitude of the vectors is important to be measured.
 ![pythagoreanpng](file:///home/karthik/quicklisp/local-projects/cl-dist-measure/data/pythagorean.png?msec=1645001345753)
 
 # Distance Formulas
@@ -32,7 +32,7 @@ The distance between any two points on the real line is the absolute value of th
 
 ## Two dimensions
 
-In the Euclidean plane, let point *p* have Cartesian coordinates *(p1, p2)* and let point *q* have coordinates *(q1, q2).*  
+In the Euclidean plane, let point *p* have Cartesian coordinates *(p1, p2)* and let point *q* have coordinates *(q1, q2).*
 Then the distance between *p* and *q* is given by,
 
 ## Higher dimensions
@@ -41,15 +41,15 @@ In general, for points given by Cartersian coordinates in n-dimensional Euclidea
 
 ## Disadvantages
 
-Euclidean distance is not scale in-varient which means that distance computed might be skewed depending on the units of the features. Typically, one needs to **normalize** the data before using this distance measure.  
+Euclidean distance is not scale in-varient which means that distance computed might be skewed depending on the units of the features. Typically, one needs to **normalize** the data before using this distance measure.
 Moreover, as the dimensionality increases of your data, the less useful Euclidean distance becomes. This has to do with the curse of dimensionality which relates to the notion that higher-dimensional space does not act as we would, intuitively, expect from 2 or 3-dimensional space.
 
 # Cosine Similarity
 
-It is a popular method for approximating how similar two vectors are. The intuition behind cosine similarity is relatively straightforward, we simply use the cosine of the angle between the two vectors to quantify how similar two vectors are.  
-From trigonometry we know that the  
-![sinecosinepng](file:///home/karthik/quicklisp/local-projects/cl-dist-measure/data/sine-cosine.png?msec=1645001362827)  
-![cosine\sine\tanjpeg](file:///home/karthik/quicklisp/local-projects/cl-dist-measure/data/cosine_sine_tan.jpeg?msec=1645001376555)  
+It is a popular method for approximating how similar two vectors are. The intuition behind cosine similarity is relatively straightforward, we simply use the cosine of the angle between the two vectors to quantify how similar two vectors are.
+From trigonometry we know that the
+![sinecosinepng](file:///home/karthik/quicklisp/local-projects/cl-dist-measure/data/sine-cosine.png?msec=1645001362827)
+![cosine\sine\tanjpeg](file:///home/karthik/quicklisp/local-projects/cl-dist-measure/data/cosine_sine_tan.jpeg?msec=1645001376555)
 The Dot Product of two Euclidean vectors** **a and** **b is defined by,
 
 > Two vectors with exactly the same orientation have a cosine similarity of 1, whereas two vectors diametrically opposed to each other have a similarity of -1. Note that their magnitude is not of importance as this is a measure of orientation.
