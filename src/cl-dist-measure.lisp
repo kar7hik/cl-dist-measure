@@ -30,7 +30,7 @@
 
 (defun cosine-similarity (x-vector y-vector &key (n (length x-vector)))
   "Returns the Cosine Similarity between two vectors."
-  (declare (type (simple-array single-float (*)) x-vector y-vector)
+  (declare (type single-float-vector  x-vector y-vector)
            (type fixnum n))
   (let ((numerator 0d0)
         (denom-1 0d0)
@@ -56,11 +56,7 @@
 
 (time (cosine-similarity (make-array 3 :initial-contents #(1d0 2d0 3d0))
                          (make-array 3 :initial-contents #(6d0 8d0 9d0))))
-(time (cosine-similarity *x* *y*))
 
-(type-of (make-array '(5)))
-
-(type-of (make-array 3 :initial-contents #(1d0 2d0 3d0)))
 
 (defparameter *x* (create-random-vector 20))
 (defparameter *y* (create-random-vector 20))

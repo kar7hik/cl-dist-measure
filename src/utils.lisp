@@ -31,9 +31,11 @@
     "Option to fully debug the program."))
 
 
-;; (deftype single-float-vector (length)
-;;   `(simple-array single-float (,length)))
+(deftype single-float-vector ()
+  `(simple-vector single-float (*)))
 
+(deftype single-float-array ()
+  `(simple-array single-float (*)))
 
 
 (defun square (value)
