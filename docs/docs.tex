@@ -1,4 +1,4 @@
-% Created 2022-02-16 Wed 15:44
+% Created 2022-02-16 Wed 15:53
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -30,18 +30,18 @@
 \tableofcontents
 
 \section{Distant measures}
-\label{sec:org29f65a4}
+\label{sec:orgc1093ab}
 Various types of distance measures and implementations
 
 \section{Introduction}
-\label{sec:orgceba741}
+\label{sec:org82220dd}
 A distance measure is simply a means of calculation between two points
 or objects. Distance measures are useful in identifying patterns in the
 input data. Also, it can be used to recognize similarities among the
 data.
 
 \subsection{Euclidean Distance}
-\label{sec:orgeb3936b}
+\label{sec:org9b56179}
 The \textbf{Euclidean distance} between two points in Euclidean space is the
 length of a line segment between the two points. It can be calculated
 from the cartesian coordinates of the points using the Pythagorean
@@ -50,14 +50,14 @@ data and the magnitude of the vectors is important to be measured.\\
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=.9\linewidth]{/home/karthik/quicklisp/local-projects/cl-dist-measure/data/pythagorean.png}
-\caption{\label{fig:org36c3078}Pythagorean theorem}
+\includegraphics[width=.9\linewidth]{./data/pythagorean.png}
+\caption{\label{fig:org2684f3e}Pythagorean theorem}
 \end{figure}
 
 \section{Distance Formulas}
-\label{sec:org004994f}
+\label{sec:orgdd8eacf}
 \subsection{One dimension}
-\label{sec:org9c9bbca}
+\label{sec:orgb17cd84}
 The distance between any two points on the real line is the absolute
 value of the numerical difference of their coordinates. Thus if \emph{p} and
 \emph{q} are two points on the real line, then the distance between them is
@@ -72,7 +72,7 @@ d(p, q) = \sqrt{(p-q)^2}
 $$
 
 \subsection{Two dimensions}
-\label{sec:orga7cd196}
+\label{sec:org8b32e7e}
 In the Euclidean plane, let point \emph{p} have Cartesian coordinates \emph{(p1,
 p2)} and let point \emph{q} have coordinates \emph{(q1, q2).}\\
 Then the distance between \emph{p} and \emph{q} is given by,
@@ -82,7 +82,7 @@ d(p, q) = \sqrt{(q_1-p_1)^2+(q_2-p_2)^2}
 $$
 
 \subsection{Higher dimensions}
-\label{sec:org8d21443}
+\label{sec:org4630d53}
 In general, for points given by Cartersian coordinates in n-dimensional
 Euclidean space, the distance is,
 
@@ -95,7 +95,7 @@ d(p, q) = \sqrt{\sum_{i=1}^n(p_i-q_i)^2}
 $$
 
 \subsection{Disadvantages}
-\label{sec:org4cd1dd1}
+\label{sec:orgef9df2a}
 Euclidean distance is not scale in-varient which means that distance
 computed might be skewed depending on the units of the features.
 Typically, one needs to \textbf{normalize} the data before using this distance
@@ -107,7 +107,7 @@ does not act as we would, intuitively, expect from 2 or 3-dimensional
 space.
 
 \section{Cosine Similarity}
-\label{sec:org6d20852}
+\label{sec:org02df2d9}
 It is a popular method for approximating how similar two vectors are.
 The intuition behind cosine similarity is relatively straightforward, we
 simply use the cosine of the angle between the two vectors to quantify
@@ -124,14 +124,14 @@ $$
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=.9\linewidth]{/home/karthik/quicklisp/local-projects/cl-dist-measure/data/sine-cosine.png}
-\caption{\label{fig:org531c4fb}Sine and Cosine Wave}
+\includegraphics[width=.9\linewidth]{./data/sine-cosine.png}
+\caption{\label{fig:org9b304d4}Sine and Cosine Wave}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=.9\linewidth]{/home/karthik/quicklisp/local-projects/cl-dist-measure/data/cosine_sine_tan.jpeg }
-\caption{\label{fig:orgdbea927}Trigonometry}
+\includegraphics[width=.9\linewidth]{./data/cosine_sine_tan.jpeg }
+\caption{\label{fig:orgec8a023}Trigonometry}
 \end{figure}
 The Dot Product of two Euclidean vectors** \textbf{a and} **b is defined by,
 
@@ -155,7 +155,7 @@ this is a measure of orientation.
 \end{quote}
 
 \subsection{Disadvantage}
-\label{sec:org41ad27f}
+\label{sec:orgf6110a7}
 One main disadvantage of cosine similarity is that the magnitude of
 vectors is not taken into account, merely their direction. In practice,
 this means that the differences in values are not fully taken into
@@ -164,7 +164,7 @@ similarity does not take into account the difference in rating scale
 between different users.
 
 \subsection{Usage}
-\label{sec:org179e488}
+\label{sec:orgf79566d}
 We use cosine similarity often when we have high-dimensional data and
 when the magnitude of the vectors is not of importance. For text
 analyses, this measure is quite frequently used when the data is
@@ -173,6 +173,6 @@ frequently in one document over another this does not necessarily mean
 that one document is more related to that word.
 
 \section{Reference}
-\label{sec:org8e900d5}
+\label{sec:orgef0e0bd}
 \href{https://stats.stackexchange.com/questions/99171/why-is-euclidean-distance-not-a-good-metric-in-high-dimensions}{Why is Euclidean distance not a good metric in high dimensions?}
 \end{document}

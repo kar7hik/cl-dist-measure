@@ -119,12 +119,12 @@ $$
 
 #+CAPTION: Sine and Cosine Wave
 #+NAME:   fig:Sine and Cosine Wave
-#+ATTR_HTML: :width 50% :height 50%
+#+ATTR_HTML: :width 80
 [[./data/sine-cosine.png]] \\
 
 #+CAPTION: Trigonometry
 #+NAME:   fig:Trigonometry
-#+ATTR_HTML: :width 50% :height 50%
+#+ATTR_HTML: :width 80
 [[./data/cosine_sine_tan.jpeg ]]\\
 The Dot Product of two Euclidean vectors** *a and* **b is defined by,
 
