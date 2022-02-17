@@ -110,11 +110,11 @@ how similar two vectors are.\\
 From trigonometry we know that the
 
 $$
-cos(0^\degree) = 1
+cos(0^{\circ}) = 1
 $$
 
 $$
-cos(90^\degree) = 0 \space and \space 0 <= cos(\theta) <= 1.
+cos(90^\circ) = 0 \quad and \quad 0 <= cos(\theta) <= 1.
 $$
 
 #+CAPTION: Sine and Cosine Wave
@@ -126,14 +126,14 @@ $$
 #+NAME:   fig:Trigonometry
 #+ATTR_HTML: :width 80
 [[./data/cosine_sine_tan.jpeg ]]\\
-The Dot Product of two Euclidean vectors** *a and* **b is defined by,
+The Dot Product of two Euclidean vectors *a and b* is defined by,
 
 $$
-a \cdot b = \|a\| \space \|b\| \space cos \theta,
+a \cdot b = \|a\| \, \|b\| \, cos \theta,
 $$
 
 $$
-cos(\theta) = \frac{a \cdot b}{\|a\| \space \|b\|}
+cos(\theta) = \frac{a \cdot b}{\|a\| \, \|b\|}
 $$
 
 $$
