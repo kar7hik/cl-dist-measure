@@ -53,5 +53,5 @@
           0d0
           (/ numerator denom-1 denom-2)))))
 
-(defparameter *x* (create-random-vector 20))
-(defparameter *y* (create-random-vector 20))
+;; (defparameter *x* (create-random-vector 20))
+;; (defparameter *y* (create-random-vector 20))
